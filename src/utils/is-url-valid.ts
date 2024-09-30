@@ -1,9 +1,4 @@
-export const isValidUrl = (value: string): boolean => {
-	try {
-		new URL(value);
-		return true;
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	} catch (err) {
-		return false;
-	}
-};
+export const isValidUrl = (value: string): boolean =>
+	/^(?:(?:https?|ftp):\/\/)?(?:www\.)?[a-z0-9-]+(?:\.[a-z0-9-]+)+[^\s]*$/i.test(
+		value
+	);

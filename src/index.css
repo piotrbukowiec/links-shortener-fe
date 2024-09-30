@@ -5,6 +5,137 @@
 }
 
 body {
-	background-color: #333;
-	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f9;
+	color: #333;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	display: flex;
+	flex-direction: column; /* Ustaw elementy w kolumnie */
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 400px; /* Maksymalna szerokość formularza */
+}
+
+.url-input,
+.submit-button,
+.back-button,
+.copy-button {
+	padding: 10px;
+	font-size: 16px;
+	width: 100%; /* Elementy zajmują całą szerokość kontenera */
+	max-width: 300px; /* Maksymalna szerokość elementów */
+	border-radius: 5px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	transition: background-color 0.3s;
+}
+
+.submit-button,
+.copy-button,
+.back-button {
+	border: none;
+	cursor: pointer;
+	color: white;
+}
+
+.submit-button {
+	background-color: #007bff;
+}
+
+.submit-button:hover:not(:disabled),
+.copy-button:hover,
+.back-button:hover {
+	background-color: #0056b3;
+}
+
+.submit-button:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+.copy-button {
+	background-color: #007bff;
+}
+
+.back-button {
+	background-color: #ff9800;
+}
+
+.error-header,
+.success-header {
+	font-size: 48px;
+	color: #ff4d4d;
+}
+
+.success-header {
+	color: #4caf50;
+	font-size: 32px;
+}
+
+.short-url,
+.error-message {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.success-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Upewnia się, że elementy są wyśrodkowane horyzontalnie */
+	justify-content: center;
+	min-height: 100vh;
+	text-align: center; /* Sprawia, że tekst również jest wyśrodkowany */
+}
+
+.url-input,
+.submit-button,
+.copy-button,
+.back-button {
+	width: 100%;
+	max-width: 300px;
+	padding: 10px;
+	margin-bottom: 20px;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+.short-url {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+.copy-button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+	background-color: #0056b3;
+}
+
+.back-button {
+	background-color: #ff9800;
+	color: white;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.back-button:hover {
+	background-color: #e68a00;
 }
